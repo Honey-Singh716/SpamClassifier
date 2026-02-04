@@ -131,16 +131,17 @@ The trained model was deployed using **Streamlit**.
 ---
 
 ## 📁 Project Structure
-SpamClassifier/
+
+SPAMCLASSIFIER/
 │
-├── app.py
-├── models/
-│ ├── spam_model.pkl
-│ └── tfidf_vectorizer.pkl
-├── data/
-|    |__ spam.csv
-├── model_training.ipynb
-└── README.md
+├── .dist/
+│   ├── data/          # Dataset files (e.g., spam.csv)
+│   ├── models/        # Trained model and TF-IDF vectorizer (.pkl files)
+│   └── notebook/      # Jupyter notebook for training and evaluation
+│
+├── app.py             # Streamlit web application
+└── README.md          # Project documentation
+
 
 
 
