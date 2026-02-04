@@ -1,10 +1,14 @@
 import streamlit as st
 import pickle
+import os
 
-#load the model and vectorizer
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-vectorizer = pickle.load(open("models/tfidf_vectorizer.pkl", "rb"))
-model = pickle.load(open("models/spam_model.pkl", "rb"))
+model_path = os.path.join(BASE_DIR, "models", "spam_model.pkl")
+vectorizer_path = os.path.join(BASE_DIR, "models", "tfidf_vectorizer.pkl")
+
+model = pickle.load(open(model_path, "rb"))
+vectorizer = pickle.load(open(vectorizer_path, "rb"))
 
 
 # Set up the Streamlit app
